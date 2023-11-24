@@ -1,0 +1,434 @@
+/* @font-face { */
+
+
+/* font-family: 'JuneBug'; */
+
+
+/* src: url('/media/font.ttf'); */
+
+
+/* } */
+
+@font-face {
+    font-family: 'stroke2';
+    src: url('/media/stroke2.ttf');
+}
+
+body {
+    /* font-family: 'JuneBug'; */
+    font-family: 'Montserrat', "IBM Plex Sans Thai";
+}
+
+.center-forms {
+    position: absolute;
+    width: 780px;
+    height: 650px;
+    left: 50%;
+    top: 50%;
+    margin-left: -390px;
+    margin-top: -325px;
+    font-size: 150%;
+}
+
+.stroke {
+    -webkit-text-stroke: 1px black;
+    color: #F9B5F4;
+    text-shadow: 3px 3px 0 #DA00CA, -1px -1px 0 #DA00CA, 1px -1px 0 #DA00CA, -1px 1px 0 #DA00CA, 1px 1px 0 #DA00CA;
+}
+
+.stroke2 {
+    font-family: 'stroke2';
+    position: fixed;
+    right: 2vmax;
+    top: 2vmax;
+    font-size: 5vmax;
+    -webkit-text-stroke: .5vmin #363131;
+    color: whitesmoke;
+    text-shadow: .6vmin .6vmin .6vmin #947572, -1px -1px 0 #947572, 1px -1px 0 #947572, -1px 1px 0 #947572, 1px 1px 0 #947572;
+    letter-spacing: .3vmax;
+}
+
+.sidebar {
+    display: block;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 14vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 2vmax;
+    height: 100%;
+    z-index: 1;
+    background: #ada7ff;
+    overflow-x: hidden;
+    padding-top: 10px;
+    color: #fff;
+    border-right: 2px solid grey;
+    text-align: center;
+}
+
+.sidebar a {
+    margin-left: auto;
+    text-decoration: none;
+    margin-right: auto;
+    text-align: center;
+    text-align: center;
+    font-size: 2vmax;
+    padding: 2.4vh;
+    color: #fff;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #818181;
+    background-color: #FFC9FC;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.top {
+    top: 50%;
+}
+
+.bottom {
+    margin-top: 2%;
+}
+
+
+/* 
+.database {
+    position: fixed;
+    left: 15vmax;
+    font-size: 3vmin;
+    top: 1vmax;
+}
+
+.database select {
+    position: fixed;
+    right: 50%;
+    top: 1%;
+    width: 10vmax;
+    height: 2.5vmax;
+    text-align: center;
+} */
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: gainsboro;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+    background-color: white;
+}
+
+​.copy {
+    width: 1vmax;
+    height: 1vmax;
+}
+
+.copy :click {
+    background-image: url('/media/copy2.png')
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 4vmax;
+}
+
+
+/* The actual popup */
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 20vmax;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+/* Popup arrow */
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/* Toggle this class - hide and show the popup */
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn .5s;
+    animation: fadeIn .5s;
+}
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.table-sortable th {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0096c7;
+}
+
+.table-sortable .th-sort-asc::after {
+    content: "\25b4";
+}
+
+.table-sortable .th-sort-desc::after {
+    content: "\25be";
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {
+    opacity: 0.7;
+}
+
+
+/* The Modal (background) */
+
+.modaltext {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modals {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* background-color: black; */
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content (image) */
+
+.modals-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+
+/* Caption of Modal Image */
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+/* Add Animation */
+
+.modals-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* 100% Image Width on Smaller Screens */
+
+@media only screen and (max-width: 700px) {
+    .modals-content {
+        width: 100%;
+    }
+}
+
+#progress-wrp {
+    border: 1px solid #0099CC;
+    padding: 1px;
+    position: relative;
+    height: 30px;
+    border-radius: 3px;
+    margin: 10px;
+    text-align: left;
+    background: #fff;
+    box-shadow: inset 1px 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+#progress-wrp .progress-bar {
+    height: 100%;
+    border-radius: 3px;
+    background-color: #f39ac7;
+    width: 0;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.11);
+}
+
+#progress-wrp .status {
+    top: 3px;
+    left: 50%;
+    position: absolute;
+    display: inline-block;
+    color: #000000;
+}
+
+.stock_check_btn {
+    width: 20vmax;
+}
+
+.stock_check_btn:hover {
+    width: 20vmax;
+}
+
+.donate-now {
+    list-style-type: none;
+    margin: 2vmin 0 0 0;
+    padding: 0;
+}
+
+.donate-now li {
+    float: left;
+    margin: 0 .5vmin 0 0;
+    width: 16.6vmax;
+    height: 3vmax;
+    margin-bottom: 1.5vmax;
+    position: relative;
+}
+
+.donate-now label,
+.donate-now input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.donate-now input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+}
+
+.donate-now input[type="radio"]:checked+label,
+.Checked+label {
+    background: lightblue;
+}
+
+.donate-now label {
+    padding: .5vmin;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.donate-now label:hover {
+    background: #DDD;
+}
